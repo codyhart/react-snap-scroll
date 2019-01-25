@@ -1,0 +1,56 @@
+{
+    "name": "react-snap-scroll",
+    "version": "0.0.5",
+    "keywords": [
+        "react",
+        "react scroll",
+        "react-scroll",
+        "react-snap-scroll",
+        "snap-scroll",
+        "snap scroll",
+        "snap"
+    ],
+    "description": "A container to handle 'snap scrolling' behaviour.",
+    "main": "build/index.js",
+    "peerDependencies": {
+        "react": "^16.7.0"
+    },
+    "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
+        "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+        "@babel/polyfill": "^7.2.5",
+        "object-assign": "^4.1.1",
+        "prop-types": "^15.6.2",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "react-transition-group": "^2.5.3",
+        "webpack": "3.5.1"
+    },
+    "scripts": {
+        "start": "webpack --watch",
+        "build": "webpack"
+    },
+    "author": {
+        "name": "Cody Hart",
+        "email": "chart@sfu.ca"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.4.6",
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "babel-cli": "^6.24.1",
+        "babel-core": "^7.0.0-0",
+        "babel-loader": "^7.1.5",
+        "babel-minify-webpack-plugin": "^0.3.1",
+        "babel-plugin-transform-object-rest-spread": "^6.23.0",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "babel-preset-env": "^1.5.1",
+        "css-loader": "^2.1.0",
+        "node-sass": "^4.11.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "uglifyjs-webpack-plugin": "^2.1.1"
+    }
+}

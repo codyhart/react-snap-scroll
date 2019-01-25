@@ -1,0 +1,138 @@
+.App {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    background: #222;
+
+    font-family: 'Courier New', serif;
+
+}
+
+.App .page {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
+}
+
+.App .page h2 span:first-of-type {
+    font-weight: 100;
+    color: rgba(0, 0, 0, .5);
+}
+
+.App .page h2 span:last-of-type {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+}
+
+.App .red {
+    background: #DC143C;
+}
+
+.App .orange {
+    background: #FF8C00;
+}
+
+.App .yellow {
+    background: #FFD700;
+}
+
+.App .green {
+    background: #6B8E23;
+}
+
+.App .blue {
+    background: #4682B4;
+}
+
+.App .purple {
+    background: #9932CC;
+}
+
+.App .controls,
+.App .pagination {
+
+    position: absolute;
+
+    padding: 1vw;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .25);
+
+}
+
+.App .controls {
+    top: 1vw;
+    right: 1vw;
+}
+
+.App .controls h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.App .pagination {
+    bottom: 1vw;
+    left: 1vw;
+}
+
+@media (max-width: 768px) {
+
+    .App .page {
+        font-size: 22px;
+    }
+
+    .App .controls {
+        top: 2vw;
+        right: 2vw;
+        padding: 2vw;
+    }
+
+    .App .controls h3 {
+        margin: 0 0 5px;
+    }
+
+}
+
+/* Override transition. */
+/*
+.ReactSnapScroll .akasaka-forward-enter {
+    transform: translateX(100%);
+}
+
+.ReactSnapScroll .akasaka-reverse-enter {
+    transform: translateX(-100%);
+}
+
+.ReactSnapScroll .akasaka-forward-enter-active,
+.ReactSnapScroll .akasaka-reverse-enter-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(0);
+}
+
+.ReactSnapScroll .akasaka-forward-exit,
+.ReactSnapScroll .akasaka-reverse-exit {
+    transform: translateX(0);
+}
+
+.ReactSnapScroll .akasaka-forward-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(-100%);
+}
+
+.ReactSnapScroll .akasaka-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(100%);
+}
+*/
