@@ -1,0 +1,237 @@
+.ReactSnapScroll {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    perspective: 1200px;
+
+}
+
+.ReactSnapScroll > div.Wrapper > div.inner,
+.ReactSnapScroll > div.Wrapper > div.inner > * {
+    width: inherit;
+    height: inherit;
+}
+
+.ReactSnapScroll > div.Wrapper {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: inherit;
+    height: inherit;
+
+}
+
+//*****************//
+// move-top-bottom //
+//*****************//
+.ReactSnapScroll .move-top-bottom-forward-enter {
+    transform: translateY(100%);
+}
+
+.ReactSnapScroll .move-top-bottom-reverse-enter {
+    transform: translateY(-100%);
+}
+
+.ReactSnapScroll .move-top-bottom-forward-enter-active,
+.ReactSnapScroll .move-top-bottom-reverse-enter-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(0);
+}
+
+.ReactSnapScroll .move-top-bottom-forward-exit,
+.ReactSnapScroll .move-top-bottom-reverse-exit {
+    transform: translateY(0);
+}
+
+.ReactSnapScroll .move-top-bottom-forward-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(-100%);
+}
+
+.ReactSnapScroll .move-top-bottom-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(100%);
+}
+
+//*************************//
+// move-top-bottom-stagger //
+//*************************//
+.ReactSnapScroll .move-top-bottom-stagger-forward-enter {
+    transform: translateY(100%);
+}
+
+.ReactSnapScroll .move-top-bottom-stagger-reverse-enter {
+    transform: translateY(-100%);
+}
+
+.ReactSnapScroll .move-top-bottom-stagger-forward-enter-active,
+.ReactSnapScroll .move-top-bottom-stagger-reverse-enter-active {
+    transition: transform 750ms ease-in-out;
+    transform: translateY(0);
+}
+
+.ReactSnapScroll .move-top-bottom-stagger-forward-exit,
+.ReactSnapScroll .move-top-bottom-stagger-reverse-exit {
+    transform: translateY(0);
+}
+
+.ReactSnapScroll .move-top-bottom-stagger-forward-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(-100%);
+    z-index: 5;
+}
+
+.ReactSnapScroll .move-top-bottom-stagger-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(100%);
+}
+
+//***********************//
+// scale-down-top-bottom //
+//***********************//
+.ReactSnapScroll .scale-down-top-bottom-forward-enter {
+    transform: translateY(100%);
+}
+
+.ReactSnapScroll .scale-down-top-bottom-reverse-enter {
+    transform: translateY(-100%);
+}
+
+.ReactSnapScroll .scale-down-top-bottom-forward-enter-active,
+.ReactSnapScroll .scale-down-top-bottom-reverse-enter-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(0);
+    z-index: 5;
+}
+
+.ReactSnapScroll .scale-down-top-bottom-forward-exit,
+.ReactSnapScroll .scale-down-top-bottom-reverse-exit {
+    transform: scale(1);
+}
+
+.ReactSnapScroll .scale-down-top-bottom-forward-exit-active,
+.ReactSnapScroll .scale-down-top-bottom-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: scale(.5);
+}
+
+//***************//
+// scale-down-up //
+//***************//
+.ReactSnapScroll .scale-down-up-forward-enter,
+.ReactSnapScroll .scale-down-up-reverse-enter {
+    transform: scale(.5);
+    opacity: 0;
+}
+
+.ReactSnapScroll .scale-down-up-forward-enter-active,
+.ReactSnapScroll .scale-down-up-reverse-enter-active {
+    transition: transform 500ms ease-in-out 500ms, opacity 500ms ease-in-out 500ms;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.ReactSnapScroll .scale-down-up-forward-exit,
+.ReactSnapScroll .scale-down-up-reverse-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.ReactSnapScroll .scale-down-up-forward-exit-active,
+.ReactSnapScroll .scale-down-up-reverse-exit-active {
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+    transform: scale(.5);
+    opacity: 0;
+    z-index: 5;
+}
+
+//*****************//
+// fold-top-bottom //
+//*****************//
+.ReactSnapScroll .fold-top-bottom-forward-enter {
+    transform: translateY(100%);
+}
+
+.ReactSnapScroll .fold-top-bottom-reverse-enter {
+    transform: translateY(-100%);
+}
+
+.ReactSnapScroll .fold-top-bottom-forward-enter-active,
+.ReactSnapScroll .fold-top-bottom-reverse-enter-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateY(0);
+    z-index: 5;
+}
+
+.ReactSnapScroll .fold-top-bottom-forward-exit,
+.ReactSnapScroll .fold-top-bottom-reverse-exit {
+    transform: translateY(0) rotateX(0);
+}
+
+.ReactSnapScroll .fold-top-bottom-forward-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform-origin: 50% 100%;
+    transform: translateY(-100%) rotateX(90deg);
+}
+
+.ReactSnapScroll .fold-top-bottom-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform-origin: 50% 0%;
+    transform: translateY(100%) rotateX(-90deg);
+}
+
+//*****************//
+// cube-top-bottom //
+//*****************//
+.ReactSnapScroll .cube-top-bottom-forward-enter-active {
+    transform-origin: 50% 0%;
+    backface-visibility: hidden;
+    animation: cubeTopInForward 1000ms both ease-in;
+}
+
+.ReactSnapScroll .cube-top-bottom-forward-exit-active {
+    transform-origin: 50% 100%;
+    backface-visibility: hidden;
+    animation: cubeTopOutForward 1000ms both ease-in;
+}
+
+.ReactSnapScroll .cube-top-bottom-reverse-enter-active {
+    transform-origin: 50% 100%;
+    backface-visibility: hidden;
+    animation: cubeTopInReverse 1000ms both ease-in;
+}
+
+.ReactSnapScroll .cube-top-bottom-reverse-exit-active {
+    transform-origin: 50% 0%;
+    backface-visibility: hidden;
+    animation: cubeTopOutReverse 1000ms both ease-in;
+}
+
+@keyframes cubeTopInForward {
+    0% { opacity: .3; transform: translateY(100%) rotateX(-90deg); }
+	50% { animation-timing-function: ease-out; transform: translateY(50%) translateZ(-200px) rotateX(-45deg); }
+}
+
+@keyframes cubeTopOutForward {
+    0% {}
+	50% { animation-timing-function: ease-out; transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
+	100% { opacity: .3; transform: translateY(-100%) rotateX(90deg); }
+}
+
+@keyframes cubeTopInReverse {
+    0% { opacity: .3; transform: translateY(-100%) rotateX(90deg); }
+	50% { animation-timing-function: ease-out; transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
+}
+
+@keyframes cubeTopOutReverse {
+    0% {}
+	50% { animation-timing-function: ease-out; transform: translateY(50%) translateZ(-200px) rotateX(-45deg); }
+	100% { opacity: .3; transform: translateY(100%) rotateX(-90deg); }
+}
